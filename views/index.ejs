@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% if(locals.temp) {%>
+    <h2>Temperature is <%= temp %></h2>
+    <h2>Feel like <%=feelsLike%></h2>
+    <h2><%= des %></h2>
+    <img src="<%= iconUrl %>" />
+    <% } else {%>
+    <h1>Weather App</h1>
+    <form action="/" method="post">
+      <label>Enter your city:</label>
+      <input type="text" name="cityName" />
+      <input type="submit" name="city" value="submit" />
+    </form>
+    <% } %>
+  </body>
+</html>
